@@ -8,9 +8,14 @@ public class Rectangle_Area_2D {
 
         double x2 = Double.parseDouble(input.nextLine());
         double y2 = Double.parseDouble(input.nextLine());
-        double area = Math.abs((x1 - x2) * (y1 - y2));
-        double perimeter = (Math.abs((x1 - x2)) + Math.abs((y1 - y2))) * 2;
-        System.out.printf("%.0f%n", area);
-        System.out.printf("%.0f%n", perimeter);
+
+        double length = Math.abs(x1 - x2);
+        double height = Math.abs(y1 - y2);
+
+        double area = length * height;
+        double perimeter = 2 * length + 2* height;
+
+        System.out.println(area);
+        System.out.println(perimeter);
     }
 }
